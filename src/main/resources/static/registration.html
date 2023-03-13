@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+          <!-- esto es de bootstrap, no estoy seguro si lo vamos usar todavia pero por si acaso -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
     <body>
@@ -25,7 +26,7 @@
 
             <header id="header">
                 <h1>Colchones Briones</h1>
-                <p>Descubre nuetros productos y por qué somos los mejores</p>
+                <p>Registrate para descuentos y articulos exclusivos!</p>
             </header>
 
             <form name="datos" action="#" >
@@ -33,17 +34,24 @@
                 <input type="text" name="Name"  size="40px" />
                 <br>
                 <br>
+                <label>Email</label>
+                <input type="text" name="Email" size="40px" />
+                <br>
+                <br>
+                <label>Numero</label>
+                <input type="tel" name="Number"  size="40px" />
+                <br>
+                <br>
                 <label>Contraseña</label>
                 <input type="password" name="password"  size="40px" />
                 <br>
                 <br>
-                <!-- Aca va la pagina de productos -->
-                <a href="#"target="_blank" ><input id="submitBtn"type="button" value="Sign In" /></a>
-                <a href="registration.html"><p id="linkRegis">¿No tienes cuenta? Haz click acá para registrarte</p></a>
-                <br>
-              
+                <!-- aca se debe guardar la info en la base de datos y apuntar a productos.html -->
+                <a href="#"target="_blank" ><input id="submitBtn"type="button" value="Guardar" /></a>
             </form>
         </div>
+        
+         <!-- esto es de bootstrap, no estoy seguro si lo vamos usar todavia pero por si acaso -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
 </html>
