@@ -1,0 +1,119 @@
+*{
+    font-family: Helvetica;
+}
+
+#header{
+    
+    display: block;
+    top: 0;
+    left: 0;
+    width:100%;
+    position: fixed;
+}
+/*NAVBAR*/
+
+#navbar{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    background-color:#323232;
+    height: 12%;
+}
+.nav-menu{
+    list-style: none;
+    display: flex;
+    margin-right: 40px;
+}
+.nav-menu-link{
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 40px;
+    line-height: 90px;
+    width: max-content;
+    text-decoration: none;
+    color: white;
+}
+
+#logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+.nav-menu-link:hover{
+    background-color: #9ae3ff;
+    transition: 0.7s;
+    font-size: 22px;
+}
+.cart{
+    text-align: center;
+    text-decoration: none;
+    padding-top: 50px;
+    padding-right: 40px;
+}
+.contenido{
+    
+    width: 57%;
+    padding-top: 10%;
+    
+}
+.parrafoAgenda{
+    
+    padding-left: 20px;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: 200;
+    font-family: Helvetica;
+    padding-right: 20px;
+    
+    
+}
+.botonCita{
+   
+    left: 15%;
+    top: 70%;
+    height: 100px;
+    width: 400px;
+    position: absolute;
+    display: flex;
+    background-color: #e3eaff;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+    
+}
+.botonCita:hover{
+    background: black;
+    transition: 0.5s;
+    
+}
+
+.citaItem{
+    font-size: 25px;
+    font-weight: bold;
+    color: #46516e;
+    text-decoration: none;
+    
+}
+.citaItem:hover{
+    color: white;
+}
+.cuadroImagen{
+    right: 0;
+    position: absolute;
+    display: flex;
+    top:12%;
+    height: 88%;
+    
+}
+
+
+
+

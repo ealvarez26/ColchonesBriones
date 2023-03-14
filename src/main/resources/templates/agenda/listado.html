@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Reparaciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/agenda.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header" />
+        <div class="contenido">
+            <p class="parrafoAgenda">Las reparaciones de Colchones Briones ofrecen soluciones eficaces y duraderas para problemas de desgaste, roturas o deformaciones en los colchones, brindando comodidad y calidad de descanso a sus clientes.</p>
+            <div class="botonCita"> 
+          
+
+                <a class="citaItem" th:href="@{/agenda/nuevo}">Agendar una cita</a>
+            </div>
+        </div>
+        <div class="cuadroImagen">
+            <img class="imagenCita" src="/recursos/colchon2.jpg" />
+        </div>
+        <br/>
+        <br/>
+
+
+    </body>
+</html>
+

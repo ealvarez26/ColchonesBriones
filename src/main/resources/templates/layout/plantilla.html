@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <a id="logo" href="#">Logo</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="#"><strong>Home</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="#"><strong>Productos</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" th:href="@{/agenda/listado}"><strong>Reparaciones</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="#"><strong>Perfil</strong></a></li>
+                </ul>
+                <a class="cart" href="#">Carrito</a>
+            </nav>
+         
+        </header>
+
+        <footer th:fragment="footer" class="footer">
+            <p>&COPY; Derechos Reservados 2023</p>
+        </footer>
+
+    </body>
+</html>
