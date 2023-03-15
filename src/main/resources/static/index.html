@@ -10,24 +10,24 @@
     </head>
     <body>
 
-        <div id="navbar">
-            <nav>
-                <ul>
-                    <li><a href="index.html"><strong>Home</strong></a></li>
-                    <li id="contacto"><a href="contacto.html"><strong>Contactenos</strong></a></li>
-                    <li id="productos"><a href="productos.html"><strong>Productos</strong></a></li>
-                    <li id="perfil"><a href="perfil.html"><strong>Perfil</strong></a></li>
+        <header>
+        <nav id="navbar">
+                <a id="logo" href="#">Logo</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="index.html"><strong>Home</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="productos.html"><strong>Productos</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" th:href="@{/agenda/listado}"><strong>Reparaciones</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="contacto.html"><strong>Contacto</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="perfil.html"><strong>Perfil</strong></a></li>
                 </ul>
+                <a class="cart" href="#">Carrito</a>
             </nav>
-        </div>
+        </header>
 
 
         <div class="form">
 
-            <header id="header">
-                <h1>Colchones Briones</h1>
-                <p>Descubre nuetros productos y por qué somos los mejores</p>
-            </header>
+            
 
             <form name="datos" action="#" >
                 <label>Username</label>

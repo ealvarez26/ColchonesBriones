@@ -9,23 +9,25 @@
         <link href="css/contacto.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-    <body>
+    
         <header>
-            <div id="navbar">
-                <nav>
-                    <ul>
-                        <li><a href="index.html"><strong>Home</strong></a></li>
-                        <li id="productos"><a href="productos.html"><strong>Productos</strong></a></li>
-                        <li id="perfil"><a href="perfil.html"><strong>Perfil</strong></a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav id="navbar">
+                <a id="logo" href="#">Logo</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="index.html"><strong>Home</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="productos.html"><strong>Productos</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" th:href="@{/agenda/listado}"><strong>Reparaciones</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="contacto.html"><strong>Contacto</strong></a></li>
+                    <li class="nav-menu-link"><a class="nav-menu-item" href="perfil.html"><strong>Perfil</strong></a></li>
+                </ul>
+                <a class="cart" href="#">Carrito</a>
+            </nav>
         </header>
         <section class="contact-info">
             <h3>Contactenos será un placer ayudarle</h3>
             <h2>Información de contacto</h2>
             <p>Si tienes preguntas o comentarios, no dudes en contactarnos:</p>
-            <p>Teléfono: +506 6258-4496</p>
+            <p>Teléfono: +506 8571-2788</p>
             <p>Correo electrónico: colchonesbrioness@gmail.com</p>
             <p>Horario de atención: Lunes a Viernes de 7am a 5pm</p>
         </section>
