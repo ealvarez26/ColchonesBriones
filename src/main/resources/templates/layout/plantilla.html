@@ -15,28 +15,28 @@
     </head>
     <body>
         <header th:fragment="header" class="header">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0 h-8">
-                <div class="container bg-primary">
+            <nav class="navbar navbar-expand-lg bg-dark" style="background-color: #3066ff" >
+               <!-- <div class="container bg-primary"> -->
                     <a th:href="@{/}" class="navbar-brand">Colchones Briones</a>
                     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav" >
-                            <li class="nav-item px-4"><a class=" nav-link" 
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                            <li class="nav-item px-4"><a class=" nav-link" th:href="@{/categoria/listado}"
                                                          th:text="#{plantilla.inicio}">Home</a></li>
-                            <li class="nav-item px-4"><a class=" nav-link" 
+                            <li class="nav-item px-4"><a class=" nav-link" th:href="@{/articulo/listado}"
                                                          th:text="#{plantilla.productos}">Productos</a></li>
                             <li class="nav-item px-4"><a class="nav-link" th:href="@{/agenda/listado}"
                                                          th:text="#{plantilla.reparaciones}">Reparaciones</a></li>
-                            <li class="nav-item px-4"><a class="nav-link" th:href="@{/cliente/listado}"
+                            <li class="nav-item px-4"><a class="nav-link" 
                                                          th:text="#{plantilla.contacto}">Contacto</a></li>
                            
 
                         </ul>
-                        <ul class="nav navbar-nav navbar-right" sec:authorize="isAuthenticated()">
+                        <ul class="nav navbar-nav " sec:authorize="isAuthenticated()">
                             <li class="nav-item mr-3">
-                                <a href="#" class="nav-link">
+                                <a th:href="@{/cliente/listado}" class="nav-link">
                                     <i class="fas fa-user"></i>
                                     <span th:text="#{plantilla.bienvenido}">Bienvenido</span>
                                     <span sec:authentication="name" >Usuario</span>
@@ -58,10 +58,10 @@
                             </li> 
                         </ul>
                     </div>
-                </div>
+                    <!-- comment </div>-->
             </nav>
         </header>
-        <footer th:fragment="footer" class="position-fixed bottom-0 start-0 end-0 bg-info text-white mt-5 p-2">
+        <footer th:fragment="footer" class="position-fixed bottom-0 start-0 end-0 bg-dark text-white mt-5 p-2" style="background-color: #3066ff">
             <div class="container">
                 <div class="col">
                     <p class="lead text-center">
