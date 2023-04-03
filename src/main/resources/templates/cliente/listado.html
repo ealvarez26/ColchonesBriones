@@ -1,35 +1,14 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://wwww.thymeleaf.org" 
-      xmlns:sec="http://thymeleaft.org/extras/spring-security">
-    <head th:replace="layout/plantilla :: head">
-        <title>Usuarios</title>
-        <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link href="/css/agenda.css" rel="stylesheet" type="text/css"/>
-                </head>
-                <body>
-                    <header th:replace="layout/plantilla :: header" />
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Colchones Briones</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <header th:replace="layout/plantilla :: header" />
 
+    <section th:replace="cliente/fragmentosCliente :: botonesAgregar"/>
+    <section th:replace="cliente/fragmentosCliente :: agregarCliente"/>
+    <section th:replace="cliente/fragmentosCliente :: listadoClientes"/>
 
-                    <div class="container my-5">
-                        <div class="row align-items-center">
-                            <div class="col-md-3">
-                                <!-- comment <img src="/recursos/cutedogpfp.jpg" alt="Imagen del usuario" class="img-responsive">-->
-                            </div>
-                            <div class="col-md-8 col-md-offset-1 ">
-                                <h2 class="align-items-center">Nombre del usuario</h2>
-                                <p><strong>Correo electrónico:</strong> usuario@correo.com</p>
-                                <p><strong>Descripción:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut tortor quis velit pharetra tempor. Donec finibus, felis quis rhoncus dapibus, lacus mauris finibus metus, eget bibendum lorem justo vitae velit.</p>
-                            </div>
-                        </div>
+    <footer th:replace="layout/plantilla :: footer" />
 
-                    </div>
-
-
-
-
-                    <footer th:replace="layout/plantilla :: footer"/>
-
-
-                </body>
-                </html>
+</html>
