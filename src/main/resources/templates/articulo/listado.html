@@ -2,20 +2,20 @@
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head th:replace="layout/plantilla :: head">
-        <title>TechShop</title>
+        <title>Colchones Briones</title>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
         <div class="container my-5 bg-dark">
-            <h2 th:text="#{index.titulo}">Nuestros Articulos</h2>            
+            <h2 th:text="#{index.titulo}">Nuestros Colchones</h2>            
             <div class="row row-cols-3" th:if="${articulos != null and !articulos.empty}">
                 <div class="card" th:each="articulo : ${articulos}" >
-               <!--     <img src="/images/equipo1.jpg" class="card-img-top" alt="equipo">  -->
+                    <img src="/recursos/queen.jpg" class="card-img-top" alt="equipo">  
                     <div class="card-body">
-                        <h5 class="card-title">[[${articulo.descripcion}]]</h5>
+                        <h5 class="card-title text-dark">[[${articulo.descripcion}]]</h5>
                         <h6 class="card-subtitle mb-2 text-muted text-end">[[${#numbers.formatDecimal(articulo.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</h6>
                         <a class="card-link" th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">[[#{articulo.comprar}]]</a>
-                        <p class="card-text">[[${articulo.detalle}]]</p>                        
+                        <p class="card-text text-dark">[[${articulo.detalle}]]</p>                        
                     </div>
                 </div>                
             </div>
