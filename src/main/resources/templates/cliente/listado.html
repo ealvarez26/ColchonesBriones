@@ -5,9 +5,27 @@
     </head>
     <header th:replace="layout/plantilla :: header" />
 
-    <section th:replace="cliente/fragmentosCliente :: botonesAgregar"/>
-    <section th:replace="cliente/fragmentosCliente :: agregarCliente"/>
-    <section th:replace="cliente/fragmentosCliente :: listadoClientes"/>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--<img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-thumbnail">-->
+                </div>
+                <div class="col-md-8">
+                    <h2>Nombre de Usuario</h2>
+                    <p>Descripción breve del perfil</p>
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Edad:</strong> 30 años</li>
+                        <li class="list-group-item"><strong>País:</strong> España</li>
+                        <li class="list-group-item"><strong>Profesión:</strong> Desarrollador web</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Editar perfil</a>
+                </div>
+            </div>
+        </div>
+    
+    <section th:replace="cliente/fragmentosCliente :: botonesAgregar" sec:authorize="hasRole('ROLE_ADMIN')"/>
+        <section th:replace="cliente/fragmentosCliente :: agregarCliente" sec:authorize="hasRole('ROLE_ADMIN')"/>
+        <section th:replace="cliente/fragmentosCliente :: listadoClientes" sec:authorize="hasRole('ROLE_ADMIN')"/>
 
     <footer th:replace="layout/plantilla :: footer" />
 

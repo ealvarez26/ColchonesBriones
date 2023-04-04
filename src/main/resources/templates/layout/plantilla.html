@@ -15,7 +15,12 @@
     </head>
     <body>
         <header th:fragment="header" class="header">
+<<<<<<< Updated upstream
             <nav class="navbar navbar-expand-lg bg-dark" style="background-color: #3066ff" >
+=======
+            <nav class="navbar navbar-expand-lg bg-dark " style="background-color: #3066ff" >
+                <!-- <div class="container bg-primary"> -->
+>>>>>>> Stashed changes
                 <a th:href="@{/}" class="navbar-brand">Colchones Briones</a>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -26,10 +31,15 @@
                                                      th:text="#{plantilla.inicio}">Home</a></li>
                         <li class="nav-item px-4"><a class=" nav-link" th:href="@{/articulo/listado}"
                                                      th:text="#{plantilla.productos}">Productos</a></li>
+<<<<<<< Updated upstream
                                                   
                         <li class="nav-item px-4" sec:authorize="hasRole('ROLE_ADMIN')">
                             <a class="nav-link" th:href="@{/cliente/listado}"
                                th:text="#{plantilla.clientes}">Clientes</a></li>
+=======
+                                                     
+                        
+>>>>>>> Stashed changes
                                
                         <li class="nav-item px-4"><a class="nav-link" th:href="@{/agenda/listado}"
                                                      th:text="#{plantilla.reparaciones}">Reparaciones</a></li>
