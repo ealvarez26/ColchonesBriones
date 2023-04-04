@@ -1,109 +1,35 @@
+header{
+    background-color: #0071ac;
+    
+}
 body{
-
-    background-image: url("../recursos/camaaesthetic.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover ;
-
+    background-color: white;
 }
-/*NAVBAR*/
-
-*{
-    font-family: Helvetica;
-}
-
-#header{
+.slide{
+    margin-top: 0;
     
-    display: block;
-    top: 0;
-    left: 0;
-    width:100%;
-    position: fixed;
-}
-/*NAVBAR*/
-
-#navbar{
-    
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-    background-color:#155c65;
-    height: 12%;
-}
-.nav-menu{
-    list-style: none;
-    display: flex;
-    margin-right: 40px;
-}
-.nav-menu-link{
-    padding: 4px 8px;
-    border-radius: 10px;
-}
-.nav-menu-item{
-    font-size: 18px;
-    margin: 0 40px;
-    line-height: 90px;
-    width: max-content;
-    text-decoration: none;
-    color: white;
-}
-
-#logo{
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0 40px;
-    line-height: 80px;
-}
-.nav-menu-link:hover{
-    background-color: #9ae3ff;
-    transition: 0.7s;
-    font-size: 22px;
-}
-.cart{
-    text-align: center;
-    text-decoration: none;
-    padding-top: 50px;
-    padding-right: 40px;
-}
-/*NAVBAR*/
-
-
-/*FORM de login*/
-
-.form{
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    padding-top: 2%;
-    margin: 10% 20% 10% 20%;
-    background-color: rgba(65, 63, 66,0.7);
-    border-radius: 25px;
-}
-.form p{
-    
-    font-size: 24px;
+    background-color: white;
     
 }
-
-#linkRegis{
-    font-size: 15px;
-    color: white;
+.slide img{
+    height: 45%;
     
+    background-color: white;
+}
+.nosotros{
+    text-align: justify;
     
+    background-color: white;
 }
-.form header{
-    font-size: 28px;
-
+.container{
+    background-color: white;
+    color: black;
 }
-#submitBtn{
-    background-color: black;
-    color: white;
-    border-radius:20px;
-    padding: 6px 30px 6px 30px;
-    margin-bottom:10px;
-
+.row{
+    background-color: white;
 }
 
-/*FORM */
-
+.agendar{
+    text-align: justify;
+    background-color: white;
+}
