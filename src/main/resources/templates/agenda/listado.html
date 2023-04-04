@@ -4,38 +4,41 @@
     <head th:replace="layout/plantilla :: head">
         <title>Reparaciones</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    </head>
-    <body>
-        <header th:replace="layout/plantilla :: header" />
-        <section class="agendar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-8">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    
-       
-                    <p>En nuestro negocio de colchones, ofrecemos un servicio de reparación completo y confiable para todo tipo de colchones. Nuestro equipo de expertos en reparación de colchones está listo para abordar cualquier problema que tenga, desde roturas y desgaste hasta problemas de soporte y confort. Además, también ofrecemos servicios de renovación para aquellos colchones que necesitan una actualización. ¡Haga que su colchón parezca nuevo otra vez! Confíe en nosotros para todas sus necesidades de reparación y renovación de colchones.</p>
-                    <a th:href="@{/agenda/nuevo}" class="btn btn-primary my-2" >Agendar una cita</a> 
-                </div>
-                <div class="col-4">
-                    <br/>
-                    <br/>
-                    <img class="img-fluid w-4" src="/recursos/colchon2.jpg" />
-                </div>
-            </div>
-           
-        </div>
-        </section>
-        <br/>
-        <br/>
-        <footer th:replace="layout/plantilla :: footer"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                </head>
+                <body>
+                    <header th:replace="layout/plantilla :: header" />
+                    <section class="agendar">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-8">
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
 
 
-    </body>
-</html>
+                                    <p>En nuestro negocio de colchones, ofrecemos un servicio de reparación completo y confiable para todo tipo de colchones. Nuestro equipo de expertos en reparación de colchones está listo para abordar cualquier problema que tenga, desde roturas y desgaste hasta problemas de soporte y confort. Además, también ofrecemos servicios de renovación para aquellos colchones que necesitan una actualización. ¡Haga que su colchón parezca nuevo otra vez! Confíe en nosotros para todas sus necesidades de reparación y renovación de colchones.</p>
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <a th:href="@{/agenda/nuevo}" class="btn btn-primary my-2" >Agendar una cita</a>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-4">
+                                    <br/>
+                                    <br/>
+                                    <img class="img-fluid w-4" src="/recursos/colchon2.jpg" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <br/>
+                    <br/>
+                    <footer th:replace="layout/plantilla :: footer"/>
+
+
+                </body>
+                </html>
 

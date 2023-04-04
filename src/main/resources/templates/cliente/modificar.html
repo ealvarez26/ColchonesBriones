@@ -1,13 +1,55 @@
-<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org" 
       xmlns:sec="http://thymeleaft.org/extras/spring-security">
-    <head th:replace="layout/plantilla :: head">
+    <head th:replace="~{layout/plantilla :: head}">
         <title>Colchones Briones</title>
+
     </head>
-    <body>
-        <header th:replace="layout/plantilla :: header" />
-        <section th:replace="cliente/fragmentosCliente :: editarCliente"/> 
-        <footer th:replace="layout/plantilla :: footer" />
-    </body>
+    <header th:replace="layout/plantilla :: header" />
+
+    <div class="container-sm py-5 d-flex justify-content-center">
+    
+            <img src="/recursos/cutedogpfp2.jpg" alt="Profile Picture" class="img-thumbnail">
+        
+    </div>
+    <div class="container text-center py-5 was-validated" th:action="@{/cliente/guardar}" method="POST" th:object="${cliente}">
+        <input type="hidden" name="idCliente" th:field="*{idCliente}"/>
+
+        <div class="row">
+            <div class="col">
+                <label class="labels">Nombre</label><input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}">
+            </div>
+            
+            <div class="col-6">
+                <label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Apellidos" th:field="*{apellidos}">
+            </div>
+            
+            <div class="col">
+                <label class="labels">Correo</label><input type="email" class="form-control" placeholder="email@gmail.com" th:field="*{correo}">
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <label class="labels">Telefono</label><input type="tel" class="form-control" placeholder="****-****" th:field="*{telefono}">
+            </div>
+            
+            
+        </div>
+    </div>
+
+
+<div class="container">
+    <section th:replace="cliente/fragmentosCliente :: botonesAgregar" sec:authorize="hasRole('ROLE_ADMIN')"/>
+    <section th:replace="cliente/fragmentosCliente :: agregarCliente" sec:authorize="hasRole('ROLE_ADMIN')"/>
+    <section th:replace="cliente/fragmentosCliente :: listadoClientes" sec:authorize="hasRole('ROLE_ADMIN')"/>
+
+</div>
+    <br/>
+    <br/>
+    <br/>
+<footer th:replace="layout/plantilla :: footer" />
+
 </html>
+

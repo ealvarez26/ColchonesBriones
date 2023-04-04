@@ -33,6 +33,7 @@
                                 <table class="table table-stryped">
                                     <thead class="thead-dark">
                                         <tr>
+                                            
                                             <th>#</th>
                                             <th th:text="#{cliente.nombre}">Nombre</th>
                                             <th></th>
@@ -42,8 +43,9 @@
                                     <tbody>
                                         <tr th:each="cliente, contador : ${clientes}">
                                             <td>[[${contador.count}]]</td>
+                                            <td>[[${cliente.idCliente}]]</td>
                                             <td>[[${cliente.nombre} + ' ' + ${cliente.apellidos}]]</td>
-                                            <td class="text-end">¢[[${#numbers.formatDecimal(cliente, 1, 'DEFAULT', 2, 'DEFAULT')}]]</td>
+                                            
                                             <td>
                                                 <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/cliente/eliminar/}+${cliente.idCliente}"
                                                    class="btn btn-danger">
@@ -160,7 +162,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <a th:href="@{/cliente/listado}" class="btn btn-light btn-block">
+                            <a th:href="@{/cliente/nuevo}" class="btn btn-light btn-block">
                                 <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
                             </a>
                         </div>

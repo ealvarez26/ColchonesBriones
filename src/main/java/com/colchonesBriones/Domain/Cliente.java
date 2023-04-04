@@ -1,4 +1,4 @@
-package com.colchonesBriones.Domain;
+    package com.colchonesBriones.Domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
