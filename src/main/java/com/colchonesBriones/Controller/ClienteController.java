@@ -36,7 +36,7 @@ public class ClienteController {
     @PostMapping("/cliente/guardar")
     public String guardarCliente(Cliente cliente){
         clienteService.save(cliente);
-        return "redirect:/cliente/nuevo";
+        return "redirect:/cliente/listado";
     }
     @GetMapping("/cliente/modificar/{idCliente}")
     public String modificarCliente(Cliente cliente, Model model){
@@ -47,7 +47,7 @@ public class ClienteController {
     @GetMapping("/cliente/eliminar/{idCliente}")
     public String elminarCliente(Cliente cliente){
         clienteService.delete(cliente);
-        return "redirect:/cliente/nuevo";
+        return "redirect:/cliente/listado";
     }
     
     

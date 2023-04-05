@@ -41,9 +41,7 @@
 
 
 <div class="container">
-    <section th:replace="cliente/fragmentosCliente :: botonesAgregar" sec:authorize="hasRole('ROLE_ADMIN')"/>
-    <section th:replace="cliente/fragmentosCliente :: agregarCliente" sec:authorize="hasRole('ROLE_ADMIN')"/>
-    <section th:replace="cliente/fragmentosCliente :: listadoClientes" sec:authorize="hasRole('ROLE_ADMIN')"/>
+        <section th:replace="cliente/fragmentosCliente :: editarCliente" sec:authorize="hasRole('ROLE_ADMIN')"/>
 
 </div>
     <br/>
