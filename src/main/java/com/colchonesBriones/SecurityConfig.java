@@ -34,7 +34,7 @@ public class SecurityConfig {
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
 
-   /* @Bean
+    /*@Bean
 
     public SecurityFilterChain securityFilterChain(HttpSecurity http)
             throws Exception {
@@ -42,29 +42,12 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) -> requests
                 .requestMatchers(
                         "/",
-                        "/index",
+                        "/categoria/listado",
                         "/errores/**",
                         "/error",
                         "/webjars/**").permitAll()
-                .requestMatchers(
-                        "/articulo/nuevo",
-                        "/articulo/guardar",
-                        "/articulo/modificar/**",
-                        "/articulo/eliminar/**",
-                        "/categoria/nuevo",
-                        "/categoria/guardar",
-                        "/categoria/modificar/**",
-                        "/categoria/eliminar/**",
-                        "/cliente/nuevo",
-                        "/cliente/guardar",
-                        "/cliente/modificar/**",
-                        "/cliente/eliminar/**")
-                .hasRole("ADMIN")
-                .requestMatchers(
-                        "/articulo/listado",
-                        "/categoria/listado",
-                        "/cliente/listado")
-                .hasAnyRole("ADMIN", "VENDEDOR")
+                
+                
                 )
                 .formLogin((form) -> form
                 .loginPage("/login").permitAll()

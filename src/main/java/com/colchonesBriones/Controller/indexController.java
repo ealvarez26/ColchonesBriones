@@ -1,6 +1,6 @@
 package com.colchonesBriones.Controller;
 
-import com.colchonesBriones.Service.AgendaService;
+import com.colchonesBriones.Service.CategoriaService;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class indexController {
     @Autowired
-    AgendaService agendaService;
+    CategoriaService categoriaService;
     
    
     
-    @GetMapping("/")
+   @GetMapping("/")
     public String inicio(Model model) {
        
-       var agendas = agendaService.getAgendas();
+       var categorias = categoriaService.getCategorias(false);
        
-        model.addAttribute("agendas", agendas);
-        return "/agenda/listado";
+        model.addAttribute("categorias", categorias);
+        return "/categoria/listado";
     }
     
     }

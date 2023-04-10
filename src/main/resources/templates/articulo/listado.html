@@ -6,17 +6,12 @@
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
-        <div class="container my-5 bg-dark">
-            <h2 th:text="#{index.titulo}">Nuestros Colchones</h2>            
+        
+            <h2 th:text="#{index.titulo}" class="py-5">Nuestros Colchones</h2>            
             <div class="row row-cols-3" th:if="${articulos != null and !articulos.empty}">
                 <div class="card" th:each="articulo : ${articulos}" >
                    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Individual"></button>
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Matrimonial"></button>
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Queen"></button>
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="King"></button>
-                </div>
+                
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="/recursos/individual.jpg" class="d-block" alt="Individual" style="width:300px;"  >
@@ -31,14 +26,7 @@
                         <img src="/recursos/King.jpg" class="d-block" alt="King"  width="300">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button> 
+               
                     <div class="card-body">
                         <h5 class="card-title text-dark">[[${articulo.descripcion}]]</h5>
                         <h6 class="card-subtitle mb-2 text-muted text-end">[[${#numbers.formatDecimal(articulo.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</h6>
@@ -50,7 +38,7 @@
             <div th:if="${articulos == null or articulos.empty}"  th:text="#{articulo.no_mostrar}">
                 No tenemos lista de articulos que mostrar...
             </div>
-        </div>
+            </div>
         <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>
