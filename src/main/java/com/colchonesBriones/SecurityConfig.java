@@ -34,7 +34,7 @@ public class SecurityConfig {
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
 
-    /*@Bean
+    @Bean
 
     public SecurityFilterChain securityFilterChain(HttpSecurity http)
             throws Exception {
@@ -42,12 +42,38 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) -> requests
                 .requestMatchers(
                         "/",
-                        "/categoria/listado",
+                        "/index",
                         "/errores/**",
                         "/error",
-                        "/webjars/**").permitAll()
+                        "/webjars/**",
+                        "/recursos/**",
+                        "/css/**").permitAll()
+
                 
-                
+                .requestMatchers(
+                        "/articulo/listado",
+                        "/categoria/listado",
+                        "").permitAll()
+
+                        .requestMatchers(
+                        "/agenda/listado",
+                        "/agenda/nuevo",
+                        "/agenda/modificar/**",
+                        "/agenda/guardar",
+                        "/agenda/eliminar/**",
+                        "/articulo/nuevo",
+                        "/articulo/guardar",
+                        "/articulo/modificar/**",
+                        "/articulo/eliminar/**",
+                        "/categoria/nuevo",
+                        "/categoria/guardar",
+                        "/categoria/modificar/**",
+                        "/categoria/eliminar/**",
+                        "/cliente/nuevo",
+                        "/cliente/guardar",
+                        "/cliente/modificar/**",
+                        "/cliente/eliminar/**")
+                .hasRole("ADMIN")
                 )
                 .formLogin((form) -> form
                 .loginPage("/login").permitAll()
@@ -56,5 +82,5 @@ public class SecurityConfig {
                 .exceptionHandling().accessDeniedPage("/errores/403");
         return http.build();
 
-    }*/
+    }
 }
