@@ -6,32 +6,20 @@
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
-        
-            <h2 th:text="#{index.titulo}" class="py-5">Nuestros Colchones</h2>            
+        <div class="container">
+            <h2 th:text="#{index.titulo}" >Nuestros Colchones</h2>                       
             <div class="row row-cols-3" th:if="${articulos != null and !articulos.empty}">
-                <div class="card" th:each="articulo : ${articulos}" >
-                   <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
-                
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/recursos/individual.jpg" class="d-block" alt="Individual" style="width:300px;"  >
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/recursos/matrimonial.jpg" class="d-block " alt="Matrimonial"  width="300">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/recursos/Queen.jpg" class="d-block " alt="Queen"  width="300">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/recursos/King.jpg" class="d-block" alt="King"  width="300">
-                    </div>
-                </div>
-               
+                <div class="card" th:each="articulo : ${articulos}" > 
                     <div class="card-body">
                         <h5 class="card-title text-dark">[[${articulo.descripcion}]]</h5>
                         <h6 class="card-subtitle mb-2 text-muted text-end">[[${#numbers.formatDecimal(articulo.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</h6>
-                        <a class="card-link" th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">[[#{articulo.comprar}]]</a>
-                        <p class="card-text text-dark">[[${articulo.detalle}]]</p> 
+                        <figure>
+                            <img th:scr="${articulo.rutaImagen}" height="150"/>
+                            <figcaption>
+                                <a class="card-link" th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">[[#{articulo.comprar}]]</a>
+                            </figcaption>
+                        </figure>
+                        <p class="card-text text-dark">[[${articulo.detalle}]]</p>                        
                         <br/>
                         <br/>
                         <br/>
