@@ -74,10 +74,15 @@ public class SecurityConfig {
                         "/cliente/modificar/**",
                         "/cliente/eliminar/**")
                 .hasRole("ADMIN")
-                )
-                .formLogin((form) -> form
-                .loginPage("/login").permitAll()
-                )
+                .requestMatchers(
+                        "/carrito/agregar/**",
+                        "/carrito/eliminar/**",
+                        "/carrito/listado")
+                .hasRole("USER")
+        )
+           
+              .formLogin((form) -> form
+                .loginPage("/login").permitAll())
                 .logout((logout) -> logout.permitAll())
                 .exceptionHandling().accessDeniedPage("/errores/403");
         return http.build();
