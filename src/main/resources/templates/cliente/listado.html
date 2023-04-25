@@ -13,59 +13,9 @@
 
 </div>
 
-    <div class="container text-center py-5 was-validated" th:action="@{/cliente/guardar}" method="POST" th:object="${cliente}">
-        <input type="hidden" name="idCliente" th:field="*{idCliente}"/>
+    
 
-        <div class="row">
-            <div class="col">
-                <label class="labels">Nombre</label><input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}">
-            </div>
-            
-            <div class="col-6">
-                <label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Apellidos" th:field="*{apellidos}">
-            </div>
-            
-            <div class="col">
-                <label class="labels">Correo</label><input type="email" class="form-control" placeholder="jfjfdk@gmail.com" th:field="*{correo}">
-            </div>
-            
-            <div class="col">
-                <label class="labels">Correo</label><input type="email" class="form-control" placeholder="jfjfdk@gmail.com" th:field="*{correo}">
-            </div>
-            
-        </div>
 
-        <div class="row">
-            <div class="col">
-                <label class="labels">Telefono</label><input type="tel" class="form-control" placeholder="2663-3831" th:field="*{telefono}">
-            </div>
-            
-            <div class="col-5">
-                Campo 5
-            </div>
-            <div class="col">
-                Campo 6
-            </div>
-        </div>
-    </div>
-
-<!--<div class="container py-5">
-    <div class="row">
-        <div class="col-4">
-            <img src="/recursos/cutedogpfp2.jpg" alt="Profile Picture" class="img-thumbnail">
-        </div>
-        <div class="col-8">
-            <h2>Nombre de Usuario</h2>
-            <p>Descripción breve del perfil</p>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Edad:</strong> 30 años</li>
-                <li class="list-group-item"><strong>País:</strong> España</li>
-                <li class="list-group-item"><strong>Profesión:</strong> Desarrollador web</li>
-            </ul>
-            <a href="#" class="btn btn-primary">Editar perfil</a>
-        </div>
-    </div>
-</div>-->
 
 <footer th:replace="layout/plantilla :: footer" />
 
