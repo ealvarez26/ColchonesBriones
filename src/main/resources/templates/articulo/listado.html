@@ -17,7 +17,7 @@
                         <h5 class="card-title text-dark">[[${articulo.descripcion}]]</h5>
                         <h6 class="card-subtitle mb-2 text-muted text-end">[[${#numbers.formatDecimal(articulo.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</h6>
                         <figure>
-                            <img th:src="${articulo.rutaImagen}" height="150" width="150"/>
+                            <img th:src="@{${articulo.rutaImagen}}" height="150" width="300"/>
                             <figcaption>
                                 <a class="card-link" th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">[[#{articulo.comprar}]]</a>
                             </figcaption>

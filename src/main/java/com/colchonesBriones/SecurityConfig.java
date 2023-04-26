@@ -66,18 +66,7 @@ public class SecurityConfig {
                         "/categoria/listado",
                         "").permitAll()
                 .requestMatchers(
-                        "/cliente/listado",
-                        "/cliente/modificar/**",
-                        "/cliente/eliminar/**",
-                        "/cliente/guardar",
-                        "").hasRole("ADMIN")
-
-                        .requestMatchers(
-                        "/agenda/listado",
-                        "/agenda/nuevo",
-                        "/agenda/modificar/**",
-                        "/agenda/guardar",
-                        "/agenda/eliminar/**",
+                        
                         "/articulo/nuevo",
                         "/articulo/guardar",
                         "/articulo/modificar/**",
@@ -86,7 +75,19 @@ public class SecurityConfig {
                         "/categoria/guardar",
                         "/categoria/modificar/**",
                         "/categoria/eliminar/**",
-                        "/cliente/nuevo"
+                        "").hasRole("ADMIN")
+
+                        .requestMatchers(
+                        "/agenda/listado",
+                        "/agenda/nuevo",
+                        "/agenda/modificar/**",
+                        "/agenda/guardar",
+                        "/agenda/eliminar/**",
+                        "/cliente/modificar/**",
+                        "/cliente/eliminar/**",
+                        "/cliente/nuevo",
+                         "/cliente/guardar",
+                        "/cliente/listado"
                         
                         )
                 .hasRole("USER")

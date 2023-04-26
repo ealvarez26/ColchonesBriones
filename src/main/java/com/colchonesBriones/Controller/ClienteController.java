@@ -1,8 +1,10 @@
 package com.colchonesBriones.Controller;
 
 
+import com.colchonesBriones.Dao.ClienteDao;
 import com.colchonesBriones.Domain.Cliente;
 import com.colchonesBriones.Service.ClienteService;
+import jakarta.servlet.http.HttpSession;
 
 
 import java.util.Arrays;
@@ -17,15 +19,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Slf4j
 @Controller
 public class ClienteController {
+    @Autowired
+    ClienteDao clienteDao;
     
     @Autowired
     ClienteService clienteService;
     
     @GetMapping("/cliente/listado")
-    public String inicio(Model model) {
-       
-       var clientes = clienteService.getClientes();
-       
+    public String inicio(Model model, HttpSession session) {
+       Long idCliente = (Long) session.getAttribute("idCliente");
+        
+        List<Cliente> cliente = clienteService.getClienteD(idCliente);
+        
+        
+        var clientes = clienteService.getClientes();
+        
+        model.addAttribute("cliente", cliente);
+  
         model.addAttribute("clientes", clientes);
         model.addAttribute("totalClientes",clientes.size());
         

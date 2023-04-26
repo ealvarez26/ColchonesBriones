@@ -1,10 +1,12 @@
 package com.colchonesBriones.Domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.io.Serializable;
@@ -21,6 +23,7 @@ public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_usuario")
     private Long idUsuario;
 
     @NotEmpty
@@ -33,5 +36,16 @@ public class Usuario implements Serializable {
     @OneToMany
     private List<Rol> roles;
 
+  
     private Long idCliente;
+
+    public Usuario() {
+    }
+
+    public Usuario(String username, String password) {
+        this.username = username;
+        this.password= password;
+    }
+    
+    
 }

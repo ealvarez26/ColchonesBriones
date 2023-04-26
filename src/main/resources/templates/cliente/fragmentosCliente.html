@@ -108,6 +108,15 @@
                                     <label for="telefono" th:text="#{cliente.telefono}">Teléfono</label>
                                     <input type="tel" class="form-control" name="telefono"  required="true">
                                 </div>
+                                <div class="form-group">
+                                    <label for="username" th:text="#{cliente.usuario.username}">Usuario</label>
+                                    <input type="text" class="form-control" name="username"  required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" th:text="#{cliente.usuario.password}">Contraseña</label>
+                                    <input type="text" class="form-control" name="password"  required="true">
+                                </div>
+                                
                             </div>
                             <div class="modal-footer">
                                 <button class="btn btn-primary" type="submit" th:text="#{accion.guardar}">Guardar</button>
@@ -148,6 +157,17 @@
                                         <div class="form-group">
                                             <label for="telefono" th:text="#{cliente.telefono}">Teléfono: </label>
                                             <input type="tel"  class="form-control" name="telefono" th:field="*{telefono}"/>
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <input type="hidden" name="idUsuario" th:field="*{usuario.idUsuario}"/>
+                                            <label for="username" >Usuario: </label>
+                                            <input type="text"  class="form-control" name="username" th:field="*{usuario.username}"/>
+                                        </div>                 
+                                        <div class="form-group">
+                                            <input type="hidden" name="idUsuario" th:field="*{usuario.idUsuario}"/>
+                                            <label for="password" >Contraseña: </label>
+                                            <input type="text"  class="form-control" name="password" th:field="*{usuario.password}"/>
                                         </div>                 
                                     </div>
                                 </div>

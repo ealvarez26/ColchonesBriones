@@ -27,7 +27,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 " >
                         <li class="nav-item px-4"><a class=" nav-link" th:href="@{/categoria/listado}"
                                                      th:text="#{plantilla.inicio}">Home</a></li>
-                        <li class="nav-item px-4"><a class=" nav-link" th:href="@{/}"
+                        <li class="nav-item px-4"><a class=" nav-link" th:href="@{/articulo/listado}"
                                                      th:text="#{plantilla.productos}">Productos</a></li>
 
 
@@ -41,7 +41,7 @@
                     <ul class="nav navbar-nav " sec:authorize="isAuthenticated()">
                              
                         <li class="nav-item mr-3">
-                            <a th:href="@{/cliente/nuevo}" class="nav-link">
+                            <a th:href="@{/cliente/listado}" class="nav-link">
                                 <i class="fas fa-user"></i>
                                 <span th:text="#{plantilla.bienvenido}">Bienvenido</span>
                                 <span sec:authentication="name" >Usuario</span>

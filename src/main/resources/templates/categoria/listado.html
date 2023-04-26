@@ -62,7 +62,7 @@
                             <div class="col">
                                 <div class="card-body ">
                                     <h5 class="card-title text-dark">[[${categoria.descripcion}]]</h5>
-                                    <img th:src="${categoria.rutaImagen}" class="card-img-top" alt="..."> 
+                                    <img th:src="@{${categoria.rutaImagen}}" class="card-img-top" alt="..."> 
                                     <a th:href="@{/articulo/listado}" class="btn btn-primary my-4" >Ver mas</a>             
                                 </div>
                                 

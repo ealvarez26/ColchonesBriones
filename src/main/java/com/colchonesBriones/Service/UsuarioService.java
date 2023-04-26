@@ -1,6 +1,7 @@
 package com.colchonesBriones.Service;
 
 
+import com.colchonesBriones.Dao.ClienteDao;
 import com.colchonesBriones.Dao.UsuarioDao;
 import com.colchonesBriones.Domain.Rol;
 import com.colchonesBriones.Domain.Usuario;
@@ -22,6 +23,7 @@ public class UsuarioService implements UserDetailsService {
 
     @Autowired
     private UsuarioDao usuarioDao;
+  
 
     @Override
     @Transactional(readOnly = true)
@@ -40,4 +42,6 @@ public class UsuarioService implements UserDetailsService {
         //Se devuelve User (clase de userDetails)        
         return new User(usuario.getUsername(), usuario.getPassword(), roles);
     }
+    
+    
 }

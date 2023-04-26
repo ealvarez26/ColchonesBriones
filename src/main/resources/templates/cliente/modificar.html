@@ -7,47 +7,15 @@
     </head>
     <header th:replace="layout/plantilla :: header" />
 
-    <div class="container-sm py-5 d-flex justify-content-center">
-    
-            <img src="/recursos/cutedogpfp2.jpg" alt="Profile Picture" class="img-thumbnail" width="250">
-        
-    </div>
-    <div class="container text-center py-5 was-validated" th:action="@{/cliente/guardar}" method="POST" th:object="${cliente}">
-        <input type="hidden" name="idCliente" th:field="*{idCliente}"/>
 
-        <div class="row">
-            <div class="col">
-                <label class="labels">Nombre</label><input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}"  required="true">
-            </div>
-            
-            <div class="col-6">
-                <label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Apellidos" th:field="*{apellidos}"  required="true">
-            </div>
-            
-            <div class="col">
-                <label class="labels">Correo</label><input type="email" class="form-control" placeholder="email@gmail.com" th:field="*{correo}"  required="true">
-            </div>
-            
-        </div>
-
-        <div class="row">
-            <div class="col-5">
-                <label class="labels">Telefono</label><input type="tel" class="form-control" placeholder="****-****" th:field="*{telefono}"  required="true">
-            </div>
-            
-            
-        </div>
-    </div>
-
-
-<div class="container">
+    <div class="container">
         <section th:replace="cliente/fragmentosCliente :: editarCliente" sec:authorize="hasRole('ROLE_ADMIN')"/>
 
-</div>
+    </div>
     <br/>
     <br/>
     <br/>
-<footer th:replace="layout/plantilla :: footer" />
+    <footer th:replace="layout/plantilla :: footer" />
 
 </html>
 
