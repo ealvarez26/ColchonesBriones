@@ -1,4 +1,3 @@
-
 package com.colchonesBriones.Domain;
 
 import jakarta.persistence.Entity;
@@ -34,6 +33,5 @@ public class Usuario implements Serializable {
     @OneToMany
     private List<Rol> roles;
 
-   private Long idCliente;
-    }
-
+    private Long idCliente;
+}

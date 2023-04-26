@@ -27,13 +27,13 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 " >
                         <li class="nav-item px-4"><a class=" nav-link" th:href="@{/categoria/listado}"
                                                      th:text="#{plantilla.inicio}">Home</a></li>
-                        <li class="nav-item px-4"><a class=" nav-link" th:href="@{/articulo/listado}"
+                        <li class="nav-item px-4"><a class=" nav-link" th:href="@{/}"
                                                      th:text="#{plantilla.productos}">Productos</a></li>
 
 
                         <li class="nav-item px-4"><a class="nav-link" th:href="@{/agenda/listado}"
                                                      th:text="#{plantilla.reparaciones}">Reparaciones</a></li>
-                        <li class="nav-item px-4"><a class="nav-link" th:href="@{/}"
+                        <li class="nav-item px-4"><a class="nav-link" href="#"
                                                      th:text="#{plantilla.contacto}">Contacto</a></li>
 
 
@@ -48,7 +48,7 @@
 
                             </a>
                         </li>
-                        <li class="nav-item" th:if="${esCliente != null and esCliente}">
+                        <li class="nav-item" >
                             <a th:href="@{/carrito/listado}" class="nav-link">
                                 <i class="fas fa-shopping-cart"></i>
                                 <span th:text="${cantidadArticulosCarrito}" class="btn btn-danger">Cantidad</span>

@@ -40,24 +40,18 @@ public class CarritoController {
     public String listado(Model model, HttpSession session) {
         Long idCarrito = (Long) session.getAttribute("idCarrito");
         boolean esCliente = (boolean) session.getAttribute("esCliente");
-
         List<CarritoDetalle> carritoDetalles = carritoDetalleService.getCarritoDetalles(idCarrito);
-
         double montoTotal = 0.0;
         double montoImpuestos = 0.0;
-
         for (CarritoDetalle c : carritoDetalles) {
             montoTotal += c.getPrecio() * c.getCantidad();
         }
-
         montoImpuestos = montoTotal * 0.15;
-
         model.addAttribute("carrtoDetalles", carritoDetalles);
         model.addAttribute("cantidadArticulosCarrito", carritoDetalles.size());
         model.addAttribute("esCliente", esCliente);
         model.addAttribute("montoImpuestos", montoImpuestos);
         model.addAttribute("montoTotal", montoTotal);
-
         return "/carrito/listado";
     }
 
