@@ -22,6 +22,7 @@ public class Articulo {
      private Long idCategoria;
      private String descripcion;
      private String detalle;
+     
      private double precio;
      private int existencias;
      private boolean activo;
