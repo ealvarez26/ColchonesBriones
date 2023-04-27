@@ -32,7 +32,19 @@
             <div th:if="${articulos == null or articulos.empty}"  th:text="#{articulo.no_mostrar}">
                 No tenemos lista de articulos que mostrar...
             </div>
-            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="container">
+            <section th:replace="articulo/fragmentoarticulos :: listadoArticulos" sec:authorize="hasRole('ROLE_ADMIN')"/>
+            
+
+        </div>
+
+
+
+
         <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>

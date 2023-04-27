@@ -10,13 +10,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class AgendaServiceImpl implements AgendaService{
+public class AgendaServiceImpl implements AgendaService {
+
     @Autowired
     AgendaDao agendaDao;
-    
-   
-    
-    
 
     @Override
     @Transactional(readOnly = true)
@@ -25,7 +22,7 @@ public class AgendaServiceImpl implements AgendaService{
     }
 
     @Override
-    @Transactional(readOnly=true)
+    @Transactional(readOnly = true)
     public Agenda getAgenda(Agenda agenda) {
         return agendaDao.findById(agenda.getIdCita()).orElse(null);
     }
@@ -33,8 +30,7 @@ public class AgendaServiceImpl implements AgendaService{
     @Override
     @Transactional
     public void save(Agenda agenda) {
-        
-        
+
         agendaDao.save(agenda);
     }
 
@@ -43,5 +39,7 @@ public class AgendaServiceImpl implements AgendaService{
     public void delete(Agenda agenda) {
         agendaDao.deleteById(agenda.getIdCita());
     }
+
     
+
 }

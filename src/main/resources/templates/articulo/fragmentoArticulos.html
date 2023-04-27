@@ -1,0 +1,59 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section th:fragment="listadoArticulos" id="articulos">
+         <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="btn btn-primary">
+                                <h4>Articulos</h4>
+                            </div>
+                            <div th:if="${articulos != null and !articulos.empty}">
+                                <table class="table table-stryped">
+                                    <thead class="thead-dark">
+                                        <tr>
+
+                                           
+                                            <th >Descripcion</th>
+                                            <th>Detalle</th>
+                                            <th>Precio</th>
+                                            <th>Existencias</th>
+                                            <th>Activo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="item : ${articulos}">
+                                            <td th:text="${item.descripcion}"></td>
+                                            <td th:text="${item.detalle}"></td>
+                                            <td th:text="${item.precio}"></td>
+                                            <td th:text="${item.existencias}"></td>
+                                            <td ><input type="checkbox" name="activa" th:checked="${item.activo}" disabled="true"></td>
+
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div class="text-center p-2" th:if="${articulos == null or articulos.empty}">
+                                <span th:text="#{cliente.no_mostrar}">Lista vacía</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+        </section>
+    </body>
+</html>

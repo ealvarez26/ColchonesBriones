@@ -45,5 +45,10 @@ public class AgendaController {
         agendaService.delete(agenda);
         return "redirect:/agenda/listado";
     }
-    
+    @GetMapping("/agenda/informa")
+    public String contacto(Agenda agenda){
+        return "/agenda/contacto";
+    }
 }
+    
+

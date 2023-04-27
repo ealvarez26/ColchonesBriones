@@ -64,6 +64,8 @@ public class SecurityConfig {
                 .requestMatchers(
                         "/articulo/listado",
                         "/categoria/listado",
+                        "/agenda/informa",
+                        "/agenda/contacto",
                         "").permitAll()
                 .requestMatchers(
                         

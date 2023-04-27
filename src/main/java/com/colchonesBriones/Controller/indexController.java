@@ -69,7 +69,7 @@ public class indexController {
         model.addAttribute("articulos", articulos);
         model.addAttribute("esCliente", esCliente);
 
-        return "/articulo/listado";
+        return "/categoria/listado";
     }
 }
     

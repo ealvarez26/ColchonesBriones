@@ -14,4 +14,6 @@ public interface AgendaService {
     public void save(Agenda agenda);//Para insertar o modificar (Si viene el idAgenda o no)
     
     public void delete(Agenda agenda);
+    
+   
 }
